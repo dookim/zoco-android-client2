@@ -91,29 +91,7 @@ public class MainActivity extends ActionBarActivity implements
 
     }
 
-    private void login() {
-        //provider 추가
-        //password추가
-        User user = new User("doo871128@gmail.com", "hufs");
-        String userData = new Gson().toJson(user);
-
-        Handler handler  = new ZocoHandler() {
-            @Override
-            public void onReceive(String result) {
-                //event 정의할것
-
-            }
-        };
-        new ReqTask(getBaseContext(), ZocoNetwork.Method.GET).setHandler(handler).execute(ZocoNetwork.URL_4_IS_REGISTER);
-
-        new ReqTask(getBaseContext(), ZocoNetwork.Method.POST).setHandler(handler).execute(ZocoNetwork.URL_4_QUERY_BOOK + "bookname","json");
-        /*
-        new ReqTask(getBaseContext(), ZocoNetwork.Method.POST).execute(ZocoNetwork.URL_4_LOGIN, userData);
-        new ReqTask(getBaseContext(), ZocoNetwork.Method.POST).execute(ZocoNetwork.URL_4_REGISTER_USER, userData);
-        new ReqTask(getBaseContext(), ZocoNetwork.Method.GET).execute(ZocoNetwork.SERVER_URL_4_READ + "test");
-        */
-        //new ReqTask(getBaseContext(), ZocoNetwork.Method.GET).execute("http://14.49.36.193:33333/auth/facebook");
-    }
+ 
 
     private void mkImageDir() {
         File file = new File(ZocoConstants.ZOCO_IMAGE_DIR);
@@ -253,6 +231,10 @@ public class MainActivity extends ActionBarActivity implements
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(this, LoginActivity.class);
+            intent.putExtra("logout", "setLogOut");
+            startActivity(intent);
+            finish();
             return true;
         } else if (id == R.id.register) {
             Toast.makeText(getBaseContext(), "register", Toast.LENGTH_LONG).show();
