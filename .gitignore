@@ -1,0 +1,14 @@
+build.gradle
+gradlew
+local.properties
+zoco-android-client.iml
+build
+gradle
+gradlew.bat
+settings.gradle
+zoco1.iml
+app/app.iml
+app/build
+.DS_Store
+.gradle
+.idea
