@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.zoco.activity"
+        minSdkVersion 14
+        targetSdkVersion 21
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+}
+
+dependencies {
+    compile files('libs/simple-xml-2.7.1.jar')
+    compile files('libs/gson-2.2.jar')
+    compile files('libs/jxl.jar')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    provided group: project.KAKAO_SDK_GROUP, name: 'usermgmt', version: project.KAKAO_SDK_VERSION
+    provided group: project.KAKAO_SDK_GROUP, name: 'kakaolink', version: project.KAKAO_SDK_VERSION
+
+    compile 'com.android.support:support-v4:21.0.3'
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'de.hdodenhof:circleimageview:1.2.1'
+    compile 'com.jakewharton:disklrucache:2.0.2'
+    compile 'com.facebook.android:facebook-android-sdk:3.23.0'
+    compile 'com.google.android.gms:play-services:6.5.87'
+}

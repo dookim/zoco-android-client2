@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/book_image"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:src="@drawable/ic_drawer"
+                app:border_color="#FF000000"
+                app:border_width="2dp" />
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hello"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:maxWidth="300dp"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="0.2"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:id="@+id/author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hello"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="hello"
+                android:textSize="15dp"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="check detail information about your book"
+                />
+
+
+            <CheckBox
+                android:id="@+id/scribble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="scribble?"
+                android:layout_marginTop="20dp"
+                />
+
+            <CheckBox
+                android:id="@+id/checkAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="answer question?" />
+
+            <CheckBox
+                android:id="@+id/hasAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="have answer?" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <NumberPicker
+                android:id="@+id/numberPicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
