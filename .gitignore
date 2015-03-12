@@ -9,6 +9,6 @@ settings.gradle
 zoco1.iml
 app/app.iml
 app/build
-.DS_Store
+*.DS_Store
 .gradle
 .idea
